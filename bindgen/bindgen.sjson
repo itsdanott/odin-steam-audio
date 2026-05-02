@@ -8,5 +8,8 @@ package_name = "steamaudio"
 remove_type_prefix = "IPL"
 remove_macro_prefix = "IPL"
 remove_function_prefix = "ipl"
-remove_type_suffix = "IPL"
 force_ada_case_types = true
+type_overrides = {
+    "IPLVector3" = "[3]f32",
+    "IPLMatrix4x4" = "matrix[4,4]f32"
+}

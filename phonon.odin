@@ -184,22 +184,10 @@ right, the positive y-axis pointing up, and the negative z-axis pointing ahead. 
 obtained from a game engine or audio engine must be properly transformed before being passed to any Steam Audio API
 function.
 */
-Vector3 :: struct {
-	/** The x-coordinate. */
-	x: Float32,
-
-	/** The y-coordinate. */
-	y: Float32,
-
-	/** The z-coordinate. */
-	z: Float32,
-}
+Vector3 :: [3]f32
 
 /** A 4x4 matrix used to represent an affine transform. */
-Matrix4x4 :: struct {
-	/** Matrix elements, in row-major order. */
-	elements: [4][4]Float32,
-}
+Matrix4x4 :: matrix[4,4]f32
 
 /** An axis-aligned box. Axis-aligned boxes are used to specify a volume of 3D space. */
 Box :: struct {
