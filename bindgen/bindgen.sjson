@@ -1,5 +1,4 @@
 inputs = [
-    "../steamaudio/include/phonon_version.h"
 	"../steamaudio/include/phonon.h"
 ]
 output_folder = ".."

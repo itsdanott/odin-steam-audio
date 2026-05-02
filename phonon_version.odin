@@ -15,15 +15,7 @@
  */
 package steamaudio
 
-when ODIN_OS == .Windows {
-	foreign import lib "steamaudio/lib/windows-x64/phonon.lib"
-} else when ODIN_OS == .Darwin {
-	foreign import lib "steamaudio/lib/osx/libphonon.dylib"
-} else when ODIN_OS == .Linux {
-	foreign import lib "steamaudio/lib/linux-x64/libphonon.so"
-}
-
 STEAMAUDIO_VERSION_MAJOR :: 4
 STEAMAUDIO_VERSION_MINOR :: 8
 STEAMAUDIO_VERSION_PATCH :: 1
-
+STEAMAUDIO_VERSION :: (u32(STEAMAUDIO_VERSION_MAJOR) << 16) | (u32(STEAMAUDIO_VERSION_MINOR) << 8) | u32(STEAMAUDIO_VERSION_PATCH)
